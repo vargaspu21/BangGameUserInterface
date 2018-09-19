@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Bang! Game User Interface</string>
+    <string name="bgDecrip">Background image</string>
 </resources>

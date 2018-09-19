@@ -16,7 +16,16 @@
             android:id="@+id/backgroundImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:contentDescription="@string/bgDecrip"
             app:srcCompat="@drawable/board_gamebackground" />
+
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="1143dp"></LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

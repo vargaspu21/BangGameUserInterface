@@ -6,11 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/chatTextView"
-        android:layout_width="123dp"
-        android:layout_height="63dp"
-        android:text="Chat that displays moves."
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="1dp" />
+    <LinearLayout
+        android:id="@+id/backgroundImageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/board_gamebackground" />
+    </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

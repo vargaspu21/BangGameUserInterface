@@ -21,23 +21,31 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/motherRelativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="bottom"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="416dp"
-        tools:layout_editor_absoluteY="66dp">
+        android:layout_weight="1"
+        tools:layout_editor_absoluteY="1143dp">
 
-        <TextView
-            android:id="@+id/chatBoxTextView"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:gravity="left"
-            android:text="Explains the current moves being played."
-            android:textSize="30sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="416dp"
+            tools:layout_editor_absoluteY="66dp">
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/chatBoxTextView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="Explains the current moves being played."
+                android:textSize="30sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

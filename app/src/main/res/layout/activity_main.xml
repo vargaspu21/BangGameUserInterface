@@ -33,6 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="bottom"
+            android:gravity="top"
             android:orientation="horizontal"
             tools:layout_editor_absoluteX="416dp"
             tools:layout_editor_absoluteY="66dp">
@@ -49,26 +50,87 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/middleHorizLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:id="@+id/middleLeftPlayerLayout"
-                android:layout_width="match_parent"
+                android:layout_width="50dp"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/leftCard1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/leftFlippedBack" />
+
+                <ImageView
+                    android:id="@+id/leftCard2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/leftFlippedBack" />
+
+                <ImageView
+                    android:id="@+id/leftCard3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/leftFlippedBack" />
+
+                <ImageView
+                    android:id="@+id/leftCard4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/leftFlippedBack" />
 
             </LinearLayout>
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5" />
+
             <LinearLayout
                 android:id="@+id/middleRightPlayerLayout"
-                android:layout_width="match_parent"
+                android:layout_width="50dp"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/rightFlippedBack" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/rightFlippedBack" />
             </LinearLayout>
         </LinearLayout>
 
@@ -80,11 +142,16 @@
             android:gravity="bottom"
             android:orientation="horizontal">
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5" />
+
             <ImageView
                 android:id="@+id/bangCardImageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
+                android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:maxHeight="300dp"
                 android:maxWidth="215dp"
@@ -95,34 +162,39 @@
                 android:id="@+id/duelCardimageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:adjustViewBounds="true"
-                android:maxWidth="215dp"
                 android:maxHeight="300dp"
+                android:maxWidth="215dp"
                 android:scaleType="fitCenter"
-                android:layout_weight="0"
                 app:srcCompat="@drawable/IMG_8130" />
 
             <ImageView
                 android:id="@+id/missedCardImageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:adjustViewBounds="true"
-                android:maxWidth="215dp"
                 android:maxHeight="300dp"
+                android:maxWidth="215dp"
                 android:scaleType="fitCenter"
-                android:layout_weight="0"
                 app:srcCompat="@drawable/IMG_1866" />
 
             <ImageView
                 android:id="@+id/beerCardImageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:adjustViewBounds="true"
-                android:maxWidth="215dp"
                 android:maxHeight="300dp"
+                android:maxWidth="215dp"
                 android:scaleType="fitCenter"
-                android:layout_weight="0"
                 app:srcCompat="@drawable/IMG_5846" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5" />
         </LinearLayout>
 
     </RelativeLayout>

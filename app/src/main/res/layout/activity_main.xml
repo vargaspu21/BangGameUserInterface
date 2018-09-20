@@ -29,6 +29,7 @@
         tools:layout_editor_absoluteY="1143dp">
 
         <LinearLayout
+            android:id="@+id/chatBoxLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="bottom"
@@ -48,18 +49,80 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/middleHorizLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/middleLeftPlayerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/middleRightPlayerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mainPlayerLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="bottom"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView2"
+            <ImageView
+                android:id="@+id/bangCardImageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="TextView" />
+                android:layout_weight="0"
+                android:adjustViewBounds="true"
+                android:maxHeight="300dp"
+                android:maxWidth="215dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/IMG_5695" />
+
+            <ImageView
+                android:id="@+id/duelCardimageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxWidth="215dp"
+                android:maxHeight="300dp"
+                android:scaleType="fitCenter"
+                android:layout_weight="0"
+                app:srcCompat="@drawable/IMG_8130" />
+
+            <ImageView
+                android:id="@+id/missedCardImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxWidth="215dp"
+                android:maxHeight="300dp"
+                android:scaleType="fitCenter"
+                android:layout_weight="0"
+                app:srcCompat="@drawable/IMG_1866" />
+
+            <ImageView
+                android:id="@+id/beerCardImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxWidth="215dp"
+                android:maxHeight="300dp"
+                android:scaleType="fitCenter"
+                android:layout_weight="0"
+                app:srcCompat="@drawable/IMG_5846" />
         </LinearLayout>
 
     </RelativeLayout>

@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
     <LinearLayout
         android:id="@+id/backgroundImageLayout"
         android:layout_width="match_parent"
@@ -17,6 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="@string/bgDecrip"
+            android:scaleType="centerCrop"
             app:srcCompat="@drawable/board_gamebackground" />
 
     </LinearLayout>
@@ -29,172 +36,265 @@
         tools:layout_editor_absoluteY="1143dp">
 
         <LinearLayout
-            android:id="@+id/chatBoxLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="bottom"
-            android:gravity="top"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteX="416dp"
-            tools:layout_editor_absoluteY="66dp">
-
-            <TextView
-                android:id="@+id/chatBoxTextView"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="Explains the current moves being played."
-                android:textSize="30sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/topLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="top"
-            android:orientation="horizontal">
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/middleHorizLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/middleLeftPlayerLayout"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
+                android:id="@+id/chatBoxLayout"
+                android:layout_width="match_parent"
+                android:layout_height="900dp"
+                android:layout_gravity="bottom"
                 android:layout_weight="1"
-                android:gravity="left"
-                android:orientation="vertical">
+                android:gravity="top"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="416dp"
+                tools:layout_editor_absoluteY="66dp">
 
-                <ImageView
-                    android:id="@+id/leftCard1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <TextView
+                    android:id="@+id/chatBoxTextView"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/leftFlippedBack" />
-
-                <ImageView
-                    android:id="@+id/leftCard2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/leftFlippedBack" />
-
-                <ImageView
-                    android:id="@+id/leftCard3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/leftFlippedBack" />
-
-                <ImageView
-                    android:id="@+id/leftCard4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/leftFlippedBack" />
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Player 2 plays the Missed card!"
+                    android:textSize="40sp"
+                    android:textStyle="bold|italic" />
 
             </LinearLayout>
 
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="5" />
-
             <LinearLayout
-                android:id="@+id/middleRightPlayerLayout"
-                android:layout_width="50dp"
+                android:id="@+id/topLayout"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:gravity="top"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4" />
 
                 <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/rightFlippedBack" />
+                    android:id="@+id/imageView33"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="4"
+                    app:srcCompat="@drawable/Sheriff-Symbol" />
 
                 <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="match_parent"
+                    android:id="@+id/upsideCard1"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/rightFlippedBack" />
+                    android:layout_weight="1"
+                    android:scaleType="fitStart"
+                    app:srcCompat="@drawable/downFlippedBack" />
+
+                <ImageView
+                    android:id="@+id/upsideCard2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="fitStart"
+                    app:srcCompat="@drawable/downFlippedBack" />
+
+                <ImageView
+                    android:id="@+id/upsideCard3"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="fitStart"
+                    app:srcCompat="@drawable/downFlippedBack" />
+
+                <ImageView
+                    android:id="@+id/upsideCard4"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="fitStart"
+                    app:srcCompat="@drawable/downFlippedBack" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4" />
             </LinearLayout>
-        </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/mainPlayerLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="bottom"
-            android:orientation="horizontal">
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="5" />
-
-            <ImageView
-                android:id="@+id/bangCardImageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:id="@+id/middleHorizLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:maxHeight="300dp"
-                android:maxWidth="215dp"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/IMG_5695" />
+                android:gravity="center"
+                android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/duelCardimageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                <LinearLayout
+                    android:id="@+id/middleLeftPlayerLayout"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/leftCard1"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/leftFlippedBack" />
+
+                    <ImageView
+                        android:id="@+id/leftCard2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/leftFlippedBack" />
+
+                    <ImageView
+                        android:id="@+id/leftCard3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/leftFlippedBack" />
+
+                    <ImageView
+                        android:id="@+id/leftCard4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/leftFlippedBack" />
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2" />
+
+                <ImageView
+                    android:id="@+id/imageView18"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="fitStart"
+                    app:srcCompat="@drawable/IMG_6320" />
+
+                <ImageView
+                    android:id="@+id/imageView20"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="fitStart"
+                    app:srcCompat="@drawable/IMG_1866" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2" />
+
+                <LinearLayout
+                    android:id="@+id/middleRightPlayerLayout"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/rightCard1"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/rightFlippedBack" />
+
+                    <ImageView
+                        android:id="@+id/rightCard2"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/rightFlippedBack" />
+
+                    <ImageView
+                        android:id="@+id/rightCard3"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/rightFlippedBack" />
+
+                    <ImageView
+                        android:id="@+id/rightCard4"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/rightFlippedBack" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mainPlayerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:maxHeight="300dp"
-                android:maxWidth="215dp"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/IMG_8130" />
+                android:gravity="bottom"
+                android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/missedCardImageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:maxHeight="300dp"
-                android:maxWidth="215dp"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/IMG_1866" />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5" />
 
-            <ImageView
-                android:id="@+id/beerCardImageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:maxHeight="300dp"
-                android:maxWidth="215dp"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/IMG_5846" />
+                <ImageView
+                    android:id="@+id/bangCardImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="250dp"
+                    android:maxWidth="180dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/IMG_5695" />
 
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="5" />
+                <ImageView
+                    android:id="@+id/duelCardimageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="250dp"
+                    android:maxWidth="180dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/IMG_8130" />
+
+                <ImageView
+                    android:id="@+id/missedCardImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="250dp"
+                    android:maxWidth="180dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/IMG_1866" />
+
+                <ImageView
+                    android:id="@+id/beerCardImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="250dp"
+                    android:maxWidth="180dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/IMG_5846" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5" />
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </RelativeLayout>

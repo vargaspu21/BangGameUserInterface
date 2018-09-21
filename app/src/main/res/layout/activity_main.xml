@@ -6,12 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" />
-
     <LinearLayout
         android:id="@+id/backgroundImageLayout"
         android:layout_width="match_parent"
@@ -68,7 +62,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/topLayout"
+                android:id="@+id/player3Layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -76,12 +70,13 @@
                 android:orientation="horizontal">
 
                 <Space
+                    android:id="@+id/player3LeftSpace"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="4" />
 
                 <ImageView
-                    android:id="@+id/sheriffSymbolImage"
+                    android:id="@+id/sheriffSymbol"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -92,7 +87,7 @@
                     app:srcCompat="@drawable/sheriff_symbol" />
 
                 <ImageView
-                    android:id="@+id/upsideCard1"
+                    android:id="@+id/player3Card1"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -100,7 +95,7 @@
                     app:srcCompat="@drawable/downFlippedBack" />
 
                 <ImageView
-                    android:id="@+id/upsideCard2"
+                    android:id="@+id/player3Card2"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -108,7 +103,7 @@
                     app:srcCompat="@drawable/downFlippedBack" />
 
                 <ImageView
-                    android:id="@+id/upsideCard3"
+                    android:id="@+id/player3Card3"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -116,17 +111,50 @@
                     app:srcCompat="@drawable/downFlippedBack" />
 
                 <ImageView
-                    android:id="@+id/upsideCard4"
+                    android:id="@+id/player3Card4"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:scaleType="fitStart"
                     app:srcCompat="@drawable/downFlippedBack" />
 
-                <Space
+                <LinearLayout
+                    android:id="@+id/player3Lives"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="6" />
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/player3Bullet1"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        app:srcCompat="@drawable/bullet" />
+
+                    <ImageView
+                        android:id="@+id/player3Bullet2"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        app:srcCompat="@drawable/bullet" />
+
+                    <ImageView
+                        android:id="@+id/player3Bullet3"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        app:srcCompat="@drawable/bullet" />
+
+                    <ImageView
+                        android:id="@+id/player3Bullet4"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        app:srcCompat="@drawable/bullet" />
+                </LinearLayout>
+
+                <Space
+                    android:id="@+id/player3RightSpace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4" />
             </LinearLayout>
 
             <LinearLayout
@@ -138,36 +166,72 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:id="@+id/middleLeftPlayerLayout"
+                    android:id="@+id/player4Layout"
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="left"
                     android:orientation="vertical">
 
+                    <LinearLayout
+                        android:id="@+id/player4Lives"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/player4Bullet1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/bullet_upside" />
+
+                        <ImageView
+                            android:id="@+id/player4Bullet2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/bullet_upside" />
+
+                        <ImageView
+                            android:id="@+id/player4Bullet3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/bullet_upside" />
+
+                        <ImageView
+                            android:id="@+id/player4Bullet4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/bullet_upside" />
+                    </LinearLayout>
+
                     <ImageView
-                        android:id="@+id/leftCard1"
+                        android:id="@+id/player4Card1"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/leftFlippedBack" />
 
                     <ImageView
-                        android:id="@+id/leftCard2"
+                        android:id="@+id/player4Card2"
                         android:layout_width="wrap_content"
                         android:layout_height="200dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/leftFlippedBack" />
 
                     <ImageView
-                        android:id="@+id/leftCard3"
+                        android:id="@+id/player4Card3"
                         android:layout_width="wrap_content"
                         android:layout_height="200dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/leftFlippedBack" />
 
                     <ImageView
-                        android:id="@+id/leftCard4"
+                        android:id="@+id/player4Card4"
                         android:layout_width="wrap_content"
                         android:layout_height="200dp"
                         android:layout_weight="1"
@@ -176,12 +240,13 @@
                 </LinearLayout>
 
                 <Space
+                    android:id="@+id/leftMiddleSpace"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="2" />
 
                 <ImageView
-                    android:id="@+id/imageView18"
+                    android:id="@+id/drawPile"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -189,7 +254,7 @@
                     app:srcCompat="@drawable/upside_bang_card" />
 
                 <ImageView
-                    android:id="@+id/imageView20"
+                    android:id="@+id/discardPile"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -197,40 +262,77 @@
                     app:srcCompat="@drawable/missed" />
 
                 <Space
+                    android:id="@+id/rightMiddleSpace"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="2" />
 
                 <LinearLayout
-                    android:id="@+id/middleRightPlayerLayout"
+                    android:id="@+id/player2Layout"
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
+                    <LinearLayout
+                        android:id="@+id/player2Lives"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/player2Bullet1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/bullet_upside" />
+
+                        <ImageView
+                            android:id="@+id/player2Bullet2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/bullet_upside" />
+
+                        <ImageView
+                            android:id="@+id/player2Bullet3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/bullet_upside" />
+
+                        <ImageView
+                            android:id="@+id/player2Bullet4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/bullet_upside" />
+                    </LinearLayout>
+
                     <ImageView
-                        android:id="@+id/rightCard1"
+                        android:id="@+id/player2Card1"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/rightFlippedBack" />
 
                     <ImageView
-                        android:id="@+id/rightCard2"
+                        android:id="@+id/player2Card2"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/rightFlippedBack" />
 
                     <ImageView
-                        android:id="@+id/rightCard3"
+                        android:id="@+id/player2Card3"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/rightFlippedBack" />
 
                     <ImageView
-                        android:id="@+id/rightCard4"
+                        android:id="@+id/player2Card4"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:layout_weight="1"
@@ -239,7 +341,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/mainPlayerLayout"
+                android:id="@+id/player1Layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -247,6 +349,7 @@
                 android:orientation="horizontal">
 
                 <Space
+                    android:id="@+id/player1LeftSpace"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="5" />
@@ -295,7 +398,48 @@
                     android:scaleType="fitCenter"
                     app:srcCompat="@drawable/beer_card" />
 
+                <LinearLayout
+                    android:id="@+id/player1Lives"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameOfPlayer1"
+                        android:layout_width="125dp"
+                        android:layout_height="50dp"
+                        android:text="Player 1"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/player1Bullet1"
+                        android:layout_width="75dp"
+                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/bullet" />
+
+                    <ImageView
+                        android:id="@+id/player1Bullet2"
+                        android:layout_width="75dp"
+                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/bullet" />
+
+                    <ImageView
+                        android:id="@+id/player1Bullet3"
+                        android:layout_width="75dp"
+                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/bullet" />
+
+                    <ImageView
+                        android:id="@+id/player1Bullet4"
+                        android:layout_width="75dp"
+                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/bullet" />
+                </LinearLayout>
+
                 <Space
+                    android:id="@+id/player1RightSpace"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="5" />

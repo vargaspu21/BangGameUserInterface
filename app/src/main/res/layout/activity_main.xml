@@ -31,11 +31,14 @@
     <RelativeLayout
         android:id="@+id/motherRelativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="1214dp"
         android:layout_weight="1"
-        tools:layout_editor_absoluteY="1143dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
+            android:id="@+id/mainVerticalLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -78,11 +81,15 @@
                     android:layout_weight="4" />
 
                 <ImageView
-                    android:id="@+id/imageView33"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    android:layout_weight="4"
-                    app:srcCompat="@drawable/Sheriff-Symbol" />
+                    android:id="@+id/sheriffSymbolImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="100dp"
+                    android:maxWidth="70dp"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/sheriff_symbol" />
 
                 <ImageView
                     android:id="@+id/upsideCard1"
@@ -119,7 +126,7 @@
                 <Space
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4" />
+                    android:layout_weight="6" />
             </LinearLayout>
 
             <LinearLayout
@@ -179,7 +186,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:scaleType="fitStart"
-                    app:srcCompat="@drawable/IMG_6320" />
+                    app:srcCompat="@drawable/upside_bang_card" />
 
                 <ImageView
                     android:id="@+id/imageView20"
@@ -187,7 +194,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:scaleType="fitStart"
-                    app:srcCompat="@drawable/IMG_1866" />
+                    app:srcCompat="@drawable/missed" />
 
                 <Space
                     android:layout_width="wrap_content"
@@ -253,7 +260,7 @@
                     android:maxHeight="250dp"
                     android:maxWidth="180dp"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/IMG_5695" />
+                    app:srcCompat="@drawable/bang_card" />
 
                 <ImageView
                     android:id="@+id/duelCardimageView"
@@ -264,7 +271,7 @@
                     android:maxHeight="250dp"
                     android:maxWidth="180dp"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/IMG_8130" />
+                    app:srcCompat="@drawable/duel_card" />
 
                 <ImageView
                     android:id="@+id/missedCardImageView"
@@ -275,7 +282,7 @@
                     android:maxHeight="250dp"
                     android:maxWidth="180dp"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/IMG_1866" />
+                    app:srcCompat="@drawable/missed" />
 
                 <ImageView
                     android:id="@+id/beerCardImageView"
@@ -286,7 +293,7 @@
                     android:maxHeight="250dp"
                     android:maxWidth="180dp"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/IMG_5846" />
+                    app:srcCompat="@drawable/beer_card" />
 
                 <Space
                     android:layout_width="wrap_content"
